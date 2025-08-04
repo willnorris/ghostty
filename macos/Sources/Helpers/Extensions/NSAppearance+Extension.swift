@@ -10,10 +10,10 @@ extension NSAppearance {
     convenience init?(ghosttyConfig config: Ghostty.Config) {
         guard let theme = config.windowTheme else { return nil }
         switch (theme) {
-        case "dark":
+        case "dark", "prefer-dark":
             self.init(named: .darkAqua)
 
-        case "light":
+        case "light", "prefer-light":
             self.init(named: .aqua)
 
         case "auto":

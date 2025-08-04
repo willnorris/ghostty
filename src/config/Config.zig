@@ -1591,6 +1591,10 @@ keybind: Keybinds = .{},
 ///   * `system` - Use the system theme.
 ///   * `light` - Use the light theme regardless of system theme.
 ///   * `dark` - Use the dark theme regardless of system theme.
+///   * `prefer-light` - Use the system theme, but prefer light theme if no
+///      system preference is specified.
+///   * `prefer-dark` - Use the system theme, but prefer dark theme if no
+///      system preference is specified.
 ///   * `ghostty` - Use the background and foreground colors specified in the
 ///     Ghostty configuration. This is only supported on Linux builds.
 ///
@@ -6860,6 +6864,8 @@ pub const WindowTheme = enum {
     light,
     dark,
     ghostty,
+    @"prefer-dark",
+    @"prefer-light",
 };
 
 /// See window-colorspace
